@@ -1,0 +1,104 @@
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-color: rgba(238, 255, 255, 0.966);
+}
+.cnt{
+    font-size: 5ch;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+    font-weight: 300;
+    margin-top: 4pc;
+    margin-bottom: 4.5pc;
+    margin-left:40%;
+}  
+.cnt:hover{
+    color: rgb(4, 160, 250);
+}
+
+.container{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    background:transparent;
+    margin: 0 15px;
+    margin-left: 40pc;
+    margin-top: 10pc;
+    padding: 40px 80px;
+    border-radius: 7px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+}
+.container .skill-box{
+    width: 100%;
+    margin: 25px 0;
+   }
+.skill-box .title{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.skill-box .skill-bar{
+    width: 100%;
+    height: 7px;
+    border-radius:6px ;
+    background:rgba(27, 20, 20, 0.315) ;
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: blue;
+    animation: progress 0.6s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 80%;
+}
+.skill-per.js{
+    width: 70%;
+}
+.skill-per.bi{
+    width: 60%;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.skill-per .tooltip{
+    position:absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: rgba(252, 252, 252, 0.993);
+    padding: 2px 6px;
+    background: #0000ff;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.tooltip::before{
+    content: '';
+    position:absolute;
+    left: 36%;
+    bottom: -9px;
+    height: 10px;
+    width: 10px;
+    background-color: #0000ff;
+    transform:translateY(-50%) rotate(45deg);
+    z-index: -1;
+}
